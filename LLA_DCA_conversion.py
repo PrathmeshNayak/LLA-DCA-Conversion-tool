@@ -336,20 +336,20 @@ class PlotTabs:
             spine.set_color("white")
         self.canvas2d.draw()
 
-    def save_plot_pdf(self):
+    def save_plot_png(self):
         if self.current_df is None:
             messagebox.showwarning("Warning", "No active data found to generate a plot save.")
             return
             
         filename = filedialog.asksaveasfilename(
-            title="Save Custom Plot as PDF", 
-            defaultextension=".pdf", 
-            filetypes=[("PDF Files", "*.pdf")]
+            title="Save Custom Plot as PNG", 
+            defaultextension=".png", 
+            filetypes=[("PNG Files", "*.png")]
         )
         if filename:
             try:
-                self.fig2d.savefig(filename, format="pdf", facecolor=self.fig2d.get_facecolor(), edgecolor='none')
-                messagebox.showinfo("Success", f"Plot exported safely to PDF structure:\n{filename}")
+                self.fig2d.savefig(filename, format="png", facecolor=self.fig2d.get_facecolor(), edgecolor='none')
+                messagebox.showinfo("Success", f"Plot exported safely to PNG structure:\n{filename}")
             except Exception as e:
                 messagebox.showerror("Export Error", str(e))
 
