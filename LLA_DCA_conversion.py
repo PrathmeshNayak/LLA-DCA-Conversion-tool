@@ -251,7 +251,7 @@ class PlotTabs:
         self.plot_button = ttk.Button(self.control_frame, text="Plot")
         self.plot_button.grid(row=2, column=0, padx=(5, 2), pady=10, sticky="e")
         
-        self.save_button = ttk.Button(self.control_frame, text="Save Plot", command=self.save_plot_pdf)
+        self.save_button = ttk.Button(self.control_frame, text="Save Plot", command=self.save_plot_png)
         self.save_button.grid(row=2, column=1, padx=(2, 5), pady=10, sticky="w")
 
         self.fig2d = Figure(figsize=(6, 5))
